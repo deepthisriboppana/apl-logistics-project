@@ -49,10 +49,18 @@ st.markdown("""
         margin-bottom: 16px;
     }
 
-    /* Sidebar */
-    .css-1d391kg { background-color: #0d1117; }
-    section[data-testid="stSidebar"] { background-color: #111827; border-right: 1px solid #1f2937; }
-    section[data-testid="stSidebar"] .stMarkdown h2 { color: #f0f4ff; }
+    /* Sidebar - FIXED */
+    section[data-testid="stSidebar"] {
+        background-color: #111827 !important;
+        border-right: 1px solid #1f2937 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    [data-testid="collapsedControl"] {
+        display: block !important;
+        visibility: visible !important;
+        color: white !important;
+    }
 
     /* Tabs */
     .stTabs [data-baseweb="tab-list"] { background-color: #1a1f2e; border-radius: 8px; padding: 4px; }
@@ -62,7 +70,6 @@ st.markdown("""
     /* Hide default elements */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
 
